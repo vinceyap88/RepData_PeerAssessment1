@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -32,7 +37,7 @@ totStepsPerDay <- aggregate(steps ~ date, data = actData, sum)
 plot(totStepsPerDay$date, totStepsPerDay$steps, main="Number of Steps per Day From October to November 2012", xlab="Day", ylab="Number of Steps", type="h", lwd=4, col="green")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 The **mean** total number of steps taken per day:
 
@@ -61,7 +66,7 @@ avgStepsByInterval <- aggregate(steps ~ interval, data = actData, mean)
 plot(avgStepsByInterval$interval, avgStepsByInterval$steps, type="l", main = "Time Series Plot", xlab="5 minute Interval", ylab="Average number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 The 5-minute interval, on average across all the days, contains the maximum number of steps:
 
@@ -117,7 +122,7 @@ newTotStepsPerDay <- aggregate(steps ~ date, data = newActData, sum)
 plot(newTotStepsPerDay$date, newTotStepsPerDay$steps, main="Number of Steps per Day From October to November 2012\n After Missing Values were Imputed", xlab="Day", ylab="Number of Steps", type="h", lwd=4, col="green")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 The **mean** total number of steps taken per day:
 
@@ -178,4 +183,4 @@ xyplot(
 )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-14-1.png) 
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
