@@ -18,7 +18,7 @@ Reassign the date column from string format to date format.
 actData$date <- as.Date(actData$date,"%Y-%m-%d")
 ```
 ## What is mean total number of steps taken per day?
-Historam of the total number of stpes taken each day
+Histogram of the total number of stpes taken each day
 ```{r}
 totStepsPerDay <- aggregate(steps ~ date, data = actData, sum)
 plot(totStepsPerDay$date, totStepsPerDay$steps, main="Number of Steps per Day From October to November 2012", xlab="Day", ylab="Number of Steps", type="h", lwd=4, col="green")
@@ -65,7 +65,7 @@ names(newActData)<-c('interval','steps','date')
 head(newActData)
 ```
 
-Historam of the total number of stpes taken each day for the new dataset.
+Histogram of the total number of stpes taken each day for the new dataset.
 ```{r}
 newTotStepsPerDay <- aggregate(steps ~ date, data = newActData, sum)
 plot(newTotStepsPerDay$date, newTotStepsPerDay$steps, main="Number of Steps per Day From October to November 2012\n After Missing Values were Imputed", xlab="Day", ylab="Number of Steps", type="h", lwd=4, col="green")
